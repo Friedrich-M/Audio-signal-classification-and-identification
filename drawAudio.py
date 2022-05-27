@@ -106,24 +106,3 @@ plt.figure(figsize=(14, 5))
 librosa.display.specshow(chromagram, x_axis='time', y_axis='chroma', hop_length=hop_length, cmap='coolwarm')
 plt.title('Chroma')
 plt.savefig('picture/chroma.png')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
