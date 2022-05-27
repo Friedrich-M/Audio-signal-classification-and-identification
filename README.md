@@ -6,7 +6,7 @@
 .
 ├── audio
 ├── data
-├── docs
+├── picture
 ├── work_space
 ├── README.md
 ├── train.py
