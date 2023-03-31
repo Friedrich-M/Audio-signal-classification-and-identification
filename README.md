@@ -7,10 +7,11 @@
 ├── audio
 ├── data
 ├── picture
-├── work_space
+├── work_space/mbv2
 ├── README.md
-├── train.py
-└── demo.py
+├── demo.py
+├── drawAudio.py
+└── train.py
 ```
 
 ## 2.环境
@@ -46,14 +47,22 @@ wav, sr = librosa.load(data_path, sr=16000)
 spec_image = librosa.feature.melspectrogram(y=wav, sr=sr, hop_length=256)
 ```
 
+#### （4）音频图谱可视化
+
+可以直接运行[drawAudio.py](drawAudio.py)查看音频图谱
+
+```shell
+python drawAudio.py
+```
+
 
 ## 4.Train
 
 ```shell
 python train.py \
-    --data_dir /media/pan/新加卷/dataset/UrbanSound8K \
-    --train_data data/UrbanSound8K/train.txt \
-    --test_data data/UrbanSound8K/test.txt \
+    --data_dir path_to_UrbanSound8K \
+    --train_data path_to_UrbanSound8K/train.txt \
+    --test_data path_to_UrbanSound8K/test.txt \
 ```
 
 ## 5.预测
